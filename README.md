@@ -6,6 +6,12 @@
 
 <br>
 
+### Changes
+- Add macOS as build target.
+- Add test of CJK and emoji.
+
+<br>
+
 ### 動作確認環境
 ```
 $ flutter doctor
