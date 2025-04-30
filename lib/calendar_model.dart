@@ -8,9 +8,15 @@ class CalendarModel extends ChangeNotifier {
 
   Future<void> init() async {}
 
-  DateTime get firstDayOfMonth => DateTime(now.year, now.month, 1);
+  DateTime get firstDayOfMonth => DateTime(
+    // now.year, now.month, 1
+    2020, 1, 1
+  );
 
-  DateTime get lastDayOfMonth => DateTime(now.year, now.month + 1, 0);
+  DateTime get lastDayOfMonth => DateTime(
+    // now.year, now.month + 1, 0
+    2030, 12, 31
+  );
 
   void selectDay(DateTime selectedDay, DateTime focusedDay) {
     if (!isSameDay(this.selectedDay, selectedDay)) {
@@ -22,9 +28,9 @@ class CalendarModel extends ChangeNotifier {
 
   List<dynamic> fetchScheduleForDay(DateTime dateTime) {
     final schedule = {
-      '1': ['on', 'off'],
-      '2': ['off', 'on'],
-      '3': ['on', 'on'],
+      '11': ['on', 'off'],
+      '12': ['off', 'on'],
+      '13': ['on', 'on'],
     };
     return schedule[dateTime.day.toString()] ?? [null, null];
   }
