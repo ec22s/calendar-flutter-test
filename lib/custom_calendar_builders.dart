@@ -73,7 +73,7 @@ class CustomCalendarBuilders {
     return _CalendarCellTemplate(
       dayText: day.day.toString(),
       dayTextColor: _textColor(day),
-      borderColor: Colors.red[800],
+      borderColor: Colors.blue,
       borderWidth: 3.0,
     );
   }

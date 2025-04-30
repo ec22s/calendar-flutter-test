@@ -19,6 +19,9 @@ class CalendarPage extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(16),
               child: TableCalendar<dynamic>(
+                availableCalendarFormats: {
+                  CalendarFormat.month: "Month",
+                },
                 focusedDay: model.focusedDay,
                 firstDay: model.firstDayOfMonth,
                 lastDay: model.lastDayOfMonth,
@@ -31,9 +34,9 @@ class CalendarPage extends StatelessWidget {
                 // 見た目をスッキリさせるためなのでなくても大丈夫です
                 headerStyle: const HeaderStyle(
                   titleCentered: true,
-                  formatButtonVisible: false,
-                  leftChevronVisible: false,
-                  rightChevronVisible: false,
+                  // formatButtonVisible: false,
+                  // leftChevronVisible: false,
+                  // rightChevronVisible: false,
                 ),
                 calendarStyle: const CalendarStyle(
                   // true（デフォルト）の場合は
