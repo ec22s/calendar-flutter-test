@@ -19,11 +19,11 @@ class CalendarModel extends ChangeNotifier {
   );
 
   void selectDay(DateTime selectedDay, DateTime focusedDay) {
-    if (!isSameDay(this.selectedDay, selectedDay)) {
+    // if (!isSameDay(this.selectedDay, selectedDay)) {
       this.selectedDay = selectedDay;
       this.focusedDay = focusedDay;
       notifyListeners();
-    }
+    // }
   }
 
   List<dynamic> fetchScheduleForDay(DateTime dateTime) {
