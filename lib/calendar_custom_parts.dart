@@ -112,7 +112,7 @@ Border borderOfDay(
   StartingDayOfWeek startDow,
   [DateTime? focusedDay]
 ) {
-  final bool lastOfWeek = day.weekday == startDow.index % 7;
+  final bool lastOfWeek = day.weekday % 7 == startDow.index % 7;
   final bool atLastRow = focusedDay != null &&
     inCalendarLastRow(day, focusedDay, startDow);
   final Color commonColor = Theme.of(context).colorScheme.secondary;
